@@ -32,6 +32,7 @@ const callback = ({ request }) => ['style', 'script', 'worker'].includes(request
 const cacheName = 'asset-cache';
 registerRoute(
   callback,
+  // stale-while-revalidate allows you to respond to the request as quickly as possible with a cached response if available
   new StaleWhileRevalidate({
     cacheName,
     plugins: [
