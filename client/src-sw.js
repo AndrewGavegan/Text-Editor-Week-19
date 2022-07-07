@@ -1,6 +1,6 @@
 // changing require calls to import from, import can load only the piecs that you need which can save memory //
 import { warmStrategyCache } from 'workbox-recipes';
-import { CacheFirst } from 'workbox-strategies';
+import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { registerRoute } from 'workbox-routing';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 import { ExpirationPlugin } from 'workbox-expiration';
